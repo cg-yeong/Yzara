@@ -27,7 +27,7 @@ extension Project {
 //        public static var _BRIDGING_HEADER: SettingValue = SettingValue(stringLiteral: "")
         
         
-        static var _DEFAULT_PROJECT_SETTING: SettingsDictionary = SettingsDictionary().codeSignIdentityAppleDevelopment()
+        static var _DEFAULT_PROJECT_SETTING: SettingsDictionary = SettingsDictionary()
             .merging([
                 "TARGETED_DEVICE_FAMILY" : "1,2",
                 "IPHONEOS_DEPLOYMENT_TARGET" : .string(_OS_PLATFORM_VERSION),

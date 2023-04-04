@@ -46,31 +46,13 @@ extension Project {
             .glob(.relativeToManifest("Sources/**"))
         ]
         
-        let infoPlist: [String : InfoPlist.Value] = [
-            "CFBundleShortVersionString" : "1.0",
-            "CFBundleVersion" : "1",
-            "UILaunchStoryboardName": "LaunchScreen",
-                    "UIApplicationSceneManifest": [
-                        "UIApplicationSupportsMultipleScenes": false,
-                        "UISceneConfigurations": [
-                            "UIWindowSceneSessionRoleApplication": [
-                                [
-                                    "UISceneConfigurationName": "NO",
-                                    "UISceneDelegateClassName": "$(PRODUCT_MODULE_NAME).SceneDelegate"
-                                ],
-                            ]
-                        ]
-                    ],
-        ]
-        
-        
         return Target(
             name: name,
             platform: .iOS,
             product: .app,
             bundleId: YzaraSettings._BUNDLE_ID + ".\(name)",
             deploymentTarget: .iOS(targetVersion: YzaraSettings._OS_PLATFORM_VERSION, devices: [.ipad, .iphone]),
-            infoPlist: .extendingDefault(with: infoPlist),
+            infoPlist: .default,
             sources: sourcesPath,
             resources: resourcesPath,
             dependencies: dependencies,

@@ -20,5 +20,5 @@ import ProjectDescriptionHelpers
 let workspace = Workspace(name: "Yzara",
                           projects: [
                             Module.common.path,
-                            DemoSample.basicVideoChat.path
+                            Module.app.path
                           ])
