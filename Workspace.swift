@@ -1,6 +1,5 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
-import MyPlugin
 
 /*
                 +-------------+
@@ -21,5 +20,5 @@ import MyPlugin
 let workspace = Workspace(name: "Yzara",
                           projects: [
                             Module.common.path,
-                            Module.basicVideoChat.path
+                            DemoSample.basicVideoChat.path
                           ])

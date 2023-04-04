@@ -21,7 +21,7 @@ extension Project {
         
         return Project(
             name: name,
-            targets: [makeProjectTargets(name: name, dependencies: dependencies)],
+            targets: [makeProjectTarget(name: name, dependencies: dependencies)],
             schemes: []
         )
         
@@ -36,7 +36,7 @@ extension Project {
         )
     }
     
-    public static func makeProjectTargets(name: String, dependencies: [TargetDependency]) -> Target {
+    public static func makeProjectTarget(name: String, dependencies: [TargetDependency]) -> Target {
         
         let resourcesPath: ResourceFileElements = [
             .glob(pattern: .relativeToManifest("Resources/**"))
@@ -103,8 +103,8 @@ extension Project {
                     platform: .iOS,
                     product: product,
                     bundleId: bundleID,
-                    deploymentTarget: .iOS(targetVersion: "14.0", devices: [.ipad, .iphone]),
-                    infoPlist: InfoPlist.default,
+                    deploymentTarget: .iOS(targetVersion: YzaraSettings._OS_PLATFORM_VERSION, devices: [.ipad, .iphone]),
+                    infoPlist: .default,
                     sources: sourcesPath,
                     resources: resourcesPath,
                     scripts: [],

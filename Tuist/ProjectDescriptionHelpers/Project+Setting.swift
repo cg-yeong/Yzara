@@ -16,7 +16,8 @@ extension Project {
         public static let _PLATFORM: Platform = .iOS
         public static let _OS_PLATFORM_VERSION: String = "14.0"
         public static let _PROJECT_NAME: String = "Yzara"
-        public static let _PROJECT_PATH: String = "Apps"
+        public static let _PROJECT_PATH: String = "Projects"
+        public static let _DEMO_PATH: String = _PROJECT_PATH + "/Demo"
         public static let _APP_PATH: String = ""
         public static let _APP_EXTENSION_PATH: String = ""
         public static let _ENTITLEMENTS: String = ""
@@ -51,7 +52,7 @@ extension Project {
     public enum Dependency {
         public enum SPM {
             static let Rxswift: TargetDependency = .external(name: "RxSwift")
-            static let Rxcocoa: TargetDependency = .external(name: "Rxcocoa")
+            static let Rxcocoa: TargetDependency = .external(name: "RxCocoa")
             static let Rxdatasources: TargetDependency = .external(name: "RxDataSources")
             static let Alamofire: TargetDependency = .external(name: "Alamofire")
             static let Snapkit: TargetDependency = .external(name: "SnapKit")
