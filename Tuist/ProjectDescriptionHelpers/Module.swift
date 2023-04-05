@@ -19,6 +19,7 @@ public enum Module: String, CaseIterable {
 public enum DemoSample: String, CaseIterable {
     
     case basicVideoChat = "BasicVideoChat"
+    case QuickSwitchChannel = "QuickSwitchChannel"
     
 }
 

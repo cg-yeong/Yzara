@@ -21,4 +21,5 @@ let workspace = Workspace(name: "Yzara",
                           projects: [
                             Module.common.path,
                             Module.app.path
+//                            , DemoSample.QuickSwitchChannel.path
                           ])

@@ -56,9 +56,9 @@ extension Project {
             sources: sourcesPath,
             resources: resourcesPath,
             dependencies: dependencies,
-            settings: .settings(base: YzaraSettings._DEFAULT_PROJECT_SETTING.codeSignIdentityAppleDevelopment(),
-                                debug: YzaraSettings.makeDebugSetting().codeSignIdentityAppleDevelopment(),
-                                release: YzaraSettings._DEFAULT_PROJECT_SETTING.codeSignIdentityAppleDevelopment(),
+            settings: .settings(base: YzaraSettings._DEFAULT_PROJECT_SETTING,
+                                debug: YzaraSettings.makeDebugSetting(),
+                                release: YzaraSettings._DEFAULT_PROJECT_SETTING,
                                 defaultSettings: .recommended)
         )
         
